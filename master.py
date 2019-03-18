@@ -7,8 +7,4 @@ app = Flask("MyApp")
 def hello():
 	return render_template("index.html")
 
-@app.route("/dragon")
-def hello():
-	return render_template("dragon.py")
-
 app.run(debug=True)
