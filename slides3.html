@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Nature Photography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/slide1.css" rel="stylesheet">
+</head>
+<body>
+
+  <button onclick="goBack()">Go Back</button>
+
+  <h2 style="text-align:center">Slideshow Gallery</h2>
+
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 7</div>
+      <img src="images/nature1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 7</div>
+      <img src="images/nature2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 7</div>
+      <img src="images/nature3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 7</div>
+      <img src="images/nature4.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 7</div>
+      <img src="images/nature5.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 7</div>
+      <img src="images/nature6.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 7</div>
+      <img src="images/nature7.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="images/nature1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Reading">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/nature2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Primrose Hill">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/nature3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Sussex">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/nature4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Devils Dyke, Sussex">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/nature5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Mykonos, Greece">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/nature6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Sussex">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/nature7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Cyprus">
+      </div>
+      <div class="column">
+      </div>
+    </div>
+
+    <script>
+
+    function goBack() {
+      window.history.back();
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+  </script>
+
+</body>
+</html>

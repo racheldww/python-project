@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Architectural Photography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/slide1.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <button onclick="goBack()">Go Back</button>
+
+      <h2 style="text-align:center">Slideshow Gallery</h2>
+
+      <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 9</div>
+          <img src="images/Architectural9.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 9</div>
+          <img src="images/Architectural2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 9</div>
+          <img src="images/Architectural3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 9</div>
+          <img src="images/Architectural4.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 9</div>
+          <img src="images/Architectural5.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 9</div>
+          <img src="images/Architectural6.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">7 / 9</div>
+          <img src="images/Architectural7.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">8 / 9</div>
+          <img src="images/Architectural8.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">9 / 9</div>
+          <img src="images/Architectural1.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="images/Architectural9.jpg" style="width:100%" onclick="currentSlide(1)" alt="Hyde Park">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/Architectural2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Southwark">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/Architectural3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Reading">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/Architectural4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Leadenhall Market">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/Architectural5.jpg" style="width:100%" onclick="currentSlide(5)" alt="View from Tate Modern">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/Architectural6.jpg" style="width:100%" onclick="currentSlide(6)" alt="St. Paul from Millenium Bridge">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/Architectural7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Brick Lane">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/Architectural8.jpg" style="width:100%" onclick="currentSlide(8)" alt="Brick Lane">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/Architectural1.jpg" style="width:100%" onclick="currentSlide(9)" alt="Shard">
+          </div>
+        </div>
+      </div>
+
+    <script>
+
+    function goBack() {
+      window.history.back();
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+  </script>
+
+  </body>
+</html>
