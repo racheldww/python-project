@@ -56,7 +56,6 @@ body {
 .navbar .navbar-nav > .active > a:hover,
 .navbar .navbar-nav > .active > a:focus {
   color: #fff;
-  background-color: pink;
 }
 
 .navbar-wrapper .navbar .navbar-nav > li > a:hover,
@@ -106,6 +105,7 @@ body {
   left: 0%;
   font-size: 80px;
   font-family: 'Reenie Beanie', cursive;
+  color: green;
   text-shadow: none;
   text-align: center;
 }
