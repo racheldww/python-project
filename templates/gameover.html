@@ -11,7 +11,11 @@
   <body>
     <div id="text">
         <div id="gameover">
-            <h1>Reason for game over</h1>
+            {% if gameover %}
+                <h1>{{gameover}}</h1>
+            {% else %}
+                <h1>You have failed the challenge!</h1>
+            {% endif %}
         </div>
         <h1>Game Over</h1>
         <h2><button type="button" class="btn"><a href="index.html">Play again?</a></button></h2>

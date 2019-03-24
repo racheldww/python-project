@@ -4,7 +4,7 @@ import requests
 
 # create the application object
 app = Flask("MyApp")
-
+endgame = ""
 # use decorators to link the function to a url
 @app.route("/")
 def startgame():
@@ -16,6 +16,8 @@ def playagain():
 
 @app.route("/1-nochallenge.html")
 def nochallenge():
+	global endgame
+	endgame = "Does honour mean nothing to you?"
 	return render_template("1-nochallenge.html")
 
 @app.route("/1-yeschallenge.html")
@@ -24,18 +26,26 @@ def yeschallenge():
 
 @app.route("/2-left.html")
 def left():
+	global endgame
+	endgame = "Oh no, you drop through the crack and get injured!"
 	return render_template("2-left.html")
 
 @app.route("/2-right.html")
 def right():
+	global endgame
+	endgame = "Turns out you have terrible night vision. You got injured."
 	return render_template("2-right.html")
 
 @app.route("/3-torch.html")
 def torch():
+	global endgame
+	endgame = "The bats overwhelmed you!"
 	return render_template("3-torch.html")
 
 @app.route("/4-founddragon.html")
 def founddragon():
+	global endgame
+	endgame = "You are obviously not strong enough to defeat the dragon!"
 	return render_template("4-founddragon.html")
 
 @app.route("/5-foundprincess.html")
@@ -44,10 +54,14 @@ def foundprincess():
 
 @app.route("/6-goafterdragon.html")
 def goafterdragon():
+	global endgame
+	endgame = "You are obviously not strong enough to defeat the dragon!"
 	return render_template("6-goafterdragon.html")
 
 @app.route("/6-saveprincess.html")
 def saveprincess():
+	global endgame
+	endgame = "You are obviously not strong enough to defeat the dragon!"
 	return render_template("6-saveprincess.html")
 
 @app.route("/7-frienddragon.html")
@@ -58,8 +72,9 @@ def frienddragon():
 def winner():
 	return render_template("7-winner.html")
 
-@app.route("/gameover.html")
-def gameover():
-	return render_template("gameover.html")
+@app.route("/<gameover>")
+def gameover(gameover):
+	global endgame
+	return render_template("gameover.html",gameover = endgame)
 
 app.run(debug=True)
