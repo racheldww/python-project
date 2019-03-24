@@ -6,7 +6,6 @@ body {
   padding-bottom: 40px;
   color: #5a5a5a;
   cursor: url("/static/images/sword.png"), auto !important;
-  background-color: #008080;
 }
 
 /* This needs fixing, media action not working */
