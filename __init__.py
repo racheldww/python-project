@@ -10,7 +10,7 @@ endgame = ""
 def startgame():
 	return render_template("index.html") # render a template
 
-@app.route("/index.html")
+@app.route("/start")
 def playagain():
 	return render_template("index.html") 
 
