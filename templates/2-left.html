@@ -6,17 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>A story about the dragon and the brave</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../static/css/custom.css">
   </head>
   <body>
-    <div id="text">
-        <h1>You discover the floor has fallen through. Do you?</h1>
-        <h2><button type="button" class="btn"><a href="gameover.html">Jump over.</a></button></h2>
-        <h2><button type="button" class="btn"><a href="4-founddragon.html">Climb down.</a></button></h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div id="image">
+                    <img src="../static/images/1dragon.jpg" class="img-fluid" alt="Dragon">
+                </div>
+            </div>
+            <div class="col-lg">
+                <div id="text">
+                    <h2>You discover the floor has fallen through. Do you?</h2>
+                    <h2><button type="button" class="btn btn-dark"><a href="gameover">Jump over.</a></button></h2>
+                    <h2><button type="button" class="btn btn-dark"><a href="4-founddragon">Climb down.</a></button></h2>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="image">
-        <img src="../static/images/1dragon.jpg" alt="Dragon">
-    </div>
-</body>
+  </body>
 </html>
