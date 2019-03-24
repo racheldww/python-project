@@ -5,6 +5,7 @@
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
+  /* cursor: url("..static/images/sword.jpg"), default; */
 }
 
 /* This needs fixing, media action not working */
@@ -20,7 +21,7 @@ body {
   }
 }
 
-/* CUSTOMIZE THE NAVBAR
+/* CUSTOMIZE THE NAVBARswo
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
