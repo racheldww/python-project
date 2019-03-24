@@ -3,9 +3,9 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  background-color: #000099;
+  background-color: #000000;
   padding-bottom: 40px;
-  color: #5a5a5a;
+  color: #ffffff;
   cursor: url("/static/images/sword.png"), auto !important;
 }
 
