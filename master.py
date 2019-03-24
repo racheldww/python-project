@@ -12,7 +12,7 @@ def startgame():
 
 @app.route("/index.html")
 def playagain():
-	return render_template("index.html") 
+	return render_template("index.html")
 
 @app.route("/1-nochallenge.html")
 def nochallenge():
