@@ -10,6 +10,10 @@ app = Flask("MyApp")
 def startgame():
 	return render_template("index.html") # render a template
 
+@app.route("/index.html")
+def playagain():
+	return render_template("index.html") 
+
 @app.route("/1-nochallenge.html")
 def nochallenge():
 	return render_template("1-nochallenge.html")
