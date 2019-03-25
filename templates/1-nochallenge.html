@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <embed id="audiofunction" src="../static/music/dragon_music.mp3" autostart="true" loop="true" width="2" height="0">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A story about the dragon and the brave</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../static/css/custom.css">
-  </head>
-  <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <div id="image">
-                    <img src="../static/images/dragon_flying.gif" class="img-fluid" alt="Dragon">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>A story about the dragon and the brave</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+        <link rel="stylesheet" type="text/css" href="../static/css/custom.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div id="image">
+                        <img src="../static/images/dragon_flying.gif" class="img-fluid" alt="Dragon">
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg">
-                <div id="text">
-                    <h2>You have been stripped of your knighthood and kicked out of your village. The only way to regain your honour is to free the princess.</h2>
-                    <h2><button type="button" class="btn btn-dark"><a href="1-yeschallenge">Accept the challenge.</a></button></h2>
-                    <h2><button type="button" class="btn btn-dark"><a href="gameover">Do not accept the challenge.</a></button></h2>
+                <div class="col-lg">
+                    <div id="text">
+                        <h2>You have been stripped of your knighthood and kicked out of your village. The only way to regain your honour is to free the princess.</h2>
+                        <h2><button type="button" class="btn btn-dark"><a href="1-yeschallenge">Accept the challenge.</a></button></h2>
+                        <h2><button type="button" class="btn btn-dark"><a href="gameover">Do not accept the challenge.</a></button></h2>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
