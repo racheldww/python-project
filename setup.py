@@ -5,6 +5,7 @@ from flask import Flask, render_template, redirect, url_for, request
 app = Flask("MyApp")
 endgame = ""
 # use decorators to link the function to a url
+
 @app.route("/")
 def startgame():
 	return render_template("index.html") # render a template
