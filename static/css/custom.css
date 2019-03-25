@@ -2,13 +2,19 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Germania+One|Seaweed+Script|Uncial+Antiqua|Yeseva+One');
+/*font-family: 'Germania One', cursive;
+font-family: 'Yeseva One', cursive;
+font-family: 'Averia Serif Libre', cursive;
+font-family: 'Seaweed Script', cursive;
+font-family: 'Uncial Antiqua', cursive;*/
+
+@import url('https://fonts.googleapis.com/css?family=Germania+One|Metamorphous|Uncial+Antiqua');
 
 body {
   background-color: #000000;
   padding-bottom: 40px;
   color: #ffffff;
-  font-family: 'Uncial Antiqua', cursive;
+  font-family: 'Metamorphous', cursive;
 }
 
 body {
