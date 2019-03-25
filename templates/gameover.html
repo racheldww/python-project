@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/custom.css">
   </head>
     <body>
-        <div class="container">
+        <div class="container" id="content">
             <div class="row">
                 <div class="col">
                     <div id="image">
@@ -26,7 +26,10 @@
                                 <h1>You have failed the challenge!</h1>
                             {% endif %}
                         </div>
-                        <h2><button type="button" class="btn btn-dark"><a href="start">Play again?</a></button></h2>
+                        <h1 style="color:#DD0000;">Game Over</h1>
+                        <div id="options">
+                            <h2><button type="button" class="btn btn-dark"><a href="start">Play again?</a></button></h2>
+                        </div>
                     </div>
                 </div>
             </div>
