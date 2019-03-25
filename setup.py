@@ -76,6 +76,3 @@ def winner():
 def gameover(gameover):
 	global endgame
 	return render_template("gameover.html",gameover = endgame)
-
-if __name__ == '__main__':
-	app.run(debug=True)
