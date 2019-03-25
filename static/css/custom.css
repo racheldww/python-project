@@ -2,22 +2,29 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Germania+One|Seaweed+Script|Uncial+Antiqua|Yeseva+One');
+
 body {
   background-color: #000000;
   padding-bottom: 40px;
   color: #ffffff;
+  font-family: 'Uncial Antiqua', cursive;
+}
+
+body {
+	background-image: url("https://www.ihasco.co.uk/uploads/programmes_feature_images/Fire-Awareness-Training-cover.jpg");
 }
 
 * {
 	cursor: url("../images/sword.cur"), default;
 }
 
-/* This needs fixing, media action not working */
+a {
+color: #ffffff;
+}
 
-@media screen and (max-width: 1000px) {
-  .carousel-caption h1 {
-    font-size: 5px;
-  }
+#options {
+	padding-top: 50px;
 }
 @media screen and (max-width: 1000px) {
   .carousel-caption p {
